@@ -1,0 +1,36 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Genesis The First Garden"
+run/main_scene="uid://cde8kjg7x4thv"
+config/features=PackedStringArray("4.6", "Forward Plus")
+config/icon="uid://eqpfq2j5o855"
+
+[display]
+
+window/size/viewport_width=1200
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+mouse_cursor/custom_image="uid://ca7grjluhgofq"
+
+[gui]
+
+theme/custom_font="uid://n1lt6u6fiall"
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"

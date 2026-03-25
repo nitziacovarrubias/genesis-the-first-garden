@@ -1,0 +1,352 @@
+[gd_scene format=3 uid="uid://cde8kjg7x4thv"]
+
+[ext_resource type="Texture2D" uid="uid://ba67g2dbstfo8" path="res://scenes/ui/backgrounds/main_menu_background.png" id="1_xqga4"]
+[ext_resource type="Texture2D" uid="uid://cqpo7ga3k87fo" path="res://scenes/ui/title/title_scroll.png" id="2_ovrgc"]
+[ext_resource type="Texture2D" uid="uid://cb3s4uwb7dd5o" path="res://scenes/ui/panels/main_menu_panel.png" id="3_2o76q"]
+[ext_resource type="FontFile" uid="uid://n1lt6u6fiall" path="res://assets/fonts/pixel_font.ttf" id="3_6bivr"]
+[ext_resource type="Texture2D" uid="uid://h6hexog7eyir" path="res://assets/sprites/new_game_icon.png" id="4_imvie"]
+[ext_resource type="Texture2D" uid="uid://d62s7plc50eo" path="res://assets/sprites/load_game_icon.png" id="6_50h1w"]
+[ext_resource type="Texture2D" uid="uid://c48os7nbtjihi" path="res://assets/sprites/options_icon.png" id="7_euy4r"]
+[ext_resource type="Texture2D" uid="uid://dr46u5ij3qkky" path="res://assets/sprites/credits_icon.png" id="8_bre17"]
+[ext_resource type="Texture2D" uid="uid://bo0n0x4xox5p7" path="res://assets/sprites/quit_icon.png" id="9_88kup"]
+
+[node name="MainMenu" type="Control" unique_id=1751049842]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 9.0
+offset_right = 40.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+
+[node name="Background" type="TextureRect" parent="." unique_id=467904930]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -30.022095
+offset_top = 2.0
+offset_right = 2846.0254
+offset_bottom = 1553.5461
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3028868, 0.3221313)
+pivot_offset = Vector2(-10.875, -14.362915)
+mouse_filter = 2
+texture = ExtResource("1_xqga4")
+expand_mode = 3
+stretch_mode = 6
+
+[node name="DimOverlay" type="ColorRect" parent="." unique_id=1190270779]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.033333335
+anchor_top = -0.0125
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -0.00012207031
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.1254902)
+metadata/_edit_use_anchors_ = true
+
+[node name="SafeArea" type="MarginContainer" parent="." unique_id=1473292520]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -35.0
+offset_top = -5.0
+offset_right = 5.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 60
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="MainVBox" type="VBoxContainer" parent="SafeArea" unique_id=673415598]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="HeaderCenter" type="CenterContainer" parent="SafeArea/MainVBox" unique_id=2120727745]
+layout_mode = 2
+
+[node name="HeaderVBox" type="VBoxContainer" parent="SafeArea/MainVBox/HeaderCenter" unique_id=670867336]
+layout_mode = 2
+theme_override_constants/separation = -59
+
+[node name="SubtitleLabel" type="Label" parent="SafeArea/MainVBox/HeaderCenter/HeaderVBox" unique_id=1275691931]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_6bivr")
+theme_override_font_sizes/font_size = 18
+text = "A Journey of Creation"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TitleBlock" type="Control" parent="SafeArea/MainVBox/HeaderCenter/HeaderVBox" unique_id=628908082]
+custom_minimum_size = Vector2(620, 210)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="TitleScroll" type="TextureRect" parent="SafeArea/MainVBox/HeaderCenter/HeaderVBox/TitleBlock" unique_id=383614237]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -94.99999
+offset_top = -43.0
+offset_right = 2561.1797
+offset_bottom = 1682.5361
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.24762963, 0.20459953)
+mouse_filter = 2
+texture = ExtResource("2_ovrgc")
+stretch_mode = 5
+
+[node name="TitleLabel" type="Label" parent="SafeArea/MainVBox/HeaderCenter/HeaderVBox/TitleBlock" unique_id=1077872664]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 118.0
+offset_right = 549.0
+offset_bottom = 186.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_6bivr")
+theme_override_font_sizes/font_size = 30
+text = "GENESIS: 
+THE FIRST GARDEN"
+horizontal_alignment = 1
+vertical_alignment = 3
+
+[node name="MenuCenter" type="CenterContainer" parent="SafeArea/MainVBox" unique_id=2135480623]
+custom_minimum_size = Vector2(470, 330)
+layout_mode = 2
+
+[node name="MenuBlock" type="Control" parent="SafeArea/MainVBox/MenuCenter" unique_id=471874060]
+custom_minimum_size = Vector2(470, 330)
+layout_mode = 2
+
+[node name="MenuPanel" type="TextureRect" parent="SafeArea/MainVBox/MenuCenter/MenuBlock" unique_id=303365394]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -96.0
+offset_top = 65.0
+offset_right = 970.0
+offset_bottom = 759.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.41969764, 0.41259062)
+mouse_filter = 2
+texture = ExtResource("3_2o76q")
+stretch_mode = 5
+
+[node name="PanelMargin" type="MarginContainer" parent="SafeArea/MainVBox/MenuCenter/MenuBlock" unique_id=1311954929]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 130.99998
+offset_right = -42.95685
+offset_bottom = 137.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.0693643, 0.8981296)
+theme_override_constants/margin_left = 42
+theme_override_constants/margin_top = 34
+theme_override_constants/margin_right = 42
+theme_override_constants/margin_bottom = 26
+
+[node name="ButtonsContainer" type="VBoxContainer" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin" unique_id=724404761]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="BtnNewGame" type="Button" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin/ButtonsContainer" unique_id=1670055027]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+flat = true
+
+[node name="BtnNewGameMargin" type="MarginContainer" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin/ButtonsContainer/BtnNewGame" unique_id=806571932]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 4
+
+[node name="BtnNewGameRow" type="HBoxContainer" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin/ButtonsContainer/BtnNewGame/BtnNewGameMargin" unique_id=748224734]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 10
+
+[node name="BtnNewGameIcon" type="TextureRect" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin/ButtonsContainer/BtnNewGame/BtnNewGameMargin/BtnNewGameRow" unique_id=1278724314]
+custom_minimum_size = Vector2(52, 32)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("4_imvie")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BtnNewGameLabel" type="Label" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin/ButtonsContainer/BtnNewGame/BtnNewGameMargin/BtnNewGameRow" unique_id=2106964996]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_6bivr")
+theme_override_font_sizes/font_size = 24
+text = "NEW GAME"
+vertical_alignment = 1
+
+[node name="BtnLoadGame" type="Button" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin/ButtonsContainer" unique_id=1706570580]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+flat = true
+
+[node name="BtnLoadGameMargin" type="MarginContainer" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin/ButtonsContainer/BtnLoadGame" unique_id=702259631]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 4
+
+[node name="BtnLoadGameRow" type="HBoxContainer" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin/ButtonsContainer/BtnLoadGame/BtnLoadGameMargin" unique_id=1533336727]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="BtnLoadGameIcon" type="TextureRect" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin/ButtonsContainer/BtnLoadGame/BtnLoadGameMargin/BtnLoadGameRow" unique_id=1383140470]
+custom_minimum_size = Vector2(52, 32)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("6_50h1w")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BtnLoadGameLabel" type="Label" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin/ButtonsContainer/BtnLoadGame/BtnLoadGameMargin/BtnLoadGameRow" unique_id=1876716082]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_6bivr")
+theme_override_font_sizes/font_size = 24
+text = "LOAD GAME"
+vertical_alignment = 1
+
+[node name="BtnOptions" type="Button" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin/ButtonsContainer" unique_id=1336361464]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+flat = true
+
+[node name="BtnOptionsMargin" type="MarginContainer" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin/ButtonsContainer/BtnOptions" unique_id=1226575738]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 4
+
+[node name="BtnOptionsRow" type="HBoxContainer" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin/ButtonsContainer/BtnOptions/BtnOptionsMargin" unique_id=1277451918]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="BtnOptionsIcon" type="TextureRect" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin/ButtonsContainer/BtnOptions/BtnOptionsMargin/BtnOptionsRow" unique_id=1959908562]
+custom_minimum_size = Vector2(52, 32)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("7_euy4r")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BtnOptionsLabel" type="Label" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin/ButtonsContainer/BtnOptions/BtnOptionsMargin/BtnOptionsRow" unique_id=1012685242]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_6bivr")
+theme_override_font_sizes/font_size = 24
+text = "OPTIONS"
+vertical_alignment = 1
+
+[node name="BtnCredits" type="Button" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin/ButtonsContainer" unique_id=1196081122]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+flat = true
+
+[node name="BtnCreditsMargin" type="MarginContainer" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin/ButtonsContainer/BtnCredits" unique_id=1484007864]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 4
+
+[node name="BtnCreditsRow" type="HBoxContainer" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin/ButtonsContainer/BtnCredits/BtnCreditsMargin" unique_id=117509867]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="BtnCreditsIcon" type="TextureRect" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin/ButtonsContainer/BtnCredits/BtnCreditsMargin/BtnCreditsRow" unique_id=270910503]
+custom_minimum_size = Vector2(52, 32)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("8_bre17")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BtnCreditsLabel" type="Label" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin/ButtonsContainer/BtnCredits/BtnCreditsMargin/BtnCreditsRow" unique_id=503129991]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_6bivr")
+theme_override_font_sizes/font_size = 24
+text = "CREDITS"
+vertical_alignment = 1
+
+[node name="BtnQuit" type="Button" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin/ButtonsContainer" unique_id=1569999127]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+flat = true
+
+[node name="BtnQuitMargin" type="MarginContainer" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin/ButtonsContainer/BtnQuit" unique_id=683700969]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 4
+
+[node name="BtnQuitRow" type="HBoxContainer" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin/ButtonsContainer/BtnQuit/BtnQuitMargin" unique_id=1330100437]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="BtnQuitIcon" type="TextureRect" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin/ButtonsContainer/BtnQuit/BtnQuitMargin/BtnQuitRow" unique_id=281711409]
+custom_minimum_size = Vector2(52, 32)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("9_88kup")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BtnQuitLabel" type="Label" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin/ButtonsContainer/BtnQuit/BtnQuitMargin/BtnQuitRow" unique_id=1806792831]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_6bivr")
+theme_override_font_sizes/font_size = 24
+text = "QUIT"
+vertical_alignment = 1
