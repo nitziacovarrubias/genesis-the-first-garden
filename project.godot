@@ -21,7 +21,6 @@ window/size/viewport_width=1200
 window/size/viewport_height=720
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
-mouse_cursor/custom_image="uid://ca7grjluhgofq"
 
 [gui]
 

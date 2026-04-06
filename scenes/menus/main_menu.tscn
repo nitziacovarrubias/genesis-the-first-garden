@@ -1,14 +1,170 @@
 [gd_scene format=3 uid="uid://cde8kjg7x4thv"]
 
+[ext_resource type="Script" uid="uid://rawa62wskxyf" path="res://scenes/menus/main_menu.gd" id="1_euy4r"]
 [ext_resource type="Texture2D" uid="uid://ba67g2dbstfo8" path="res://scenes/ui/backgrounds/main_menu_background.png" id="1_xqga4"]
 [ext_resource type="Texture2D" uid="uid://cqpo7ga3k87fo" path="res://scenes/ui/title/title_scroll.png" id="2_ovrgc"]
 [ext_resource type="Texture2D" uid="uid://cb3s4uwb7dd5o" path="res://scenes/ui/panels/main_menu_panel.png" id="3_2o76q"]
 [ext_resource type="FontFile" uid="uid://n1lt6u6fiall" path="res://assets/fonts/pixel_font.ttf" id="3_6bivr"]
+[ext_resource type="Texture2D" uid="uid://bx43k5emj4lkf" path="res://assets/vfx/particles/feniks/fireflies/firefly_glow_2.png" id="3_bre17"]
 [ext_resource type="Texture2D" uid="uid://h6hexog7eyir" path="res://assets/sprites/new_game_icon.png" id="4_imvie"]
 [ext_resource type="Texture2D" uid="uid://d62s7plc50eo" path="res://assets/sprites/load_game_icon.png" id="6_50h1w"]
 [ext_resource type="Texture2D" uid="uid://c48os7nbtjihi" path="res://assets/sprites/options_icon.png" id="7_euy4r"]
 [ext_resource type="Texture2D" uid="uid://dr46u5ij3qkky" path="res://assets/sprites/credits_icon.png" id="8_bre17"]
 [ext_resource type="Texture2D" uid="uid://bo0n0x4xox5p7" path="res://assets/sprites/quit_icon.png" id="9_88kup"]
+[ext_resource type="AudioStream" uid="uid://b73idd4ulg76" path="res://assets/audio/music/main_menu_theme.ogg" id="12_3w8rc"]
+[ext_resource type="AudioStream" uid="uid://12v7ayvfce8a" path="res://assets/audio/sfx/ui/hover.wav" id="13_uxao6"]
+[ext_resource type="AudioStream" uid="uid://ox3fr4l0fvu5" path="res://assets/audio/sfx/ui/click.wav" id="14_vr0hv"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_88kup"]
+particle_flag_disable_z = true
+direction = Vector3(0, -1, 0)
+spread = 180.0
+initial_velocity_min = 5.0
+initial_velocity_max = 12.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.5
+scale_max = 0.7
+
+[sub_resource type="Animation" id="Animation_50h1w"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SafeArea/MainVBox/HeaderCenter/HeaderVBox/SubtitleLabel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SafeArea/MainVBox/HeaderCenter/HeaderVBox/TitleBlock:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SafeArea/MainVBox/MenuCenter/MenuBlock:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("DimOverlay:color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.28)]
+}
+
+[sub_resource type="Animation" id="Animation_bre17"]
+resource_name = "menu_idle"
+length = 3.0
+loop_mode = 1
+step = 0.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SafeArea/MainVBox/HeaderCenter/HeaderVBox/SubtitleLabel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.82000005), Color(1, 1, 1, 1), Color(1, 1, 1, 0.81960785)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("DimOverlay:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.18), Color(0, 0, 0, 0.22000001), Color(0, 0, 0, 0.18039216)]
+}
+
+[sub_resource type="Animation" id="Animation_euy4r"]
+resource_name = "menu_intro"
+length = 1.4
+step = 0.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SafeArea/MainVBox/HeaderCenter/HeaderVBox/SubtitleLabel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.35),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SafeArea/MainVBox/HeaderCenter/HeaderVBox/TitleBlock:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.65),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SafeArea/MainVBox/MenuCenter/MenuBlock:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("DimOverlay:color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.28), Color(0, 0, 0, 0.18)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bre17"]
+_data = {
+&"RESET": SubResource("Animation_50h1w"),
+&"menu_idle": SubResource("Animation_bre17"),
+&"menu_intro": SubResource("Animation_euy4r")
+}
 
 [node name="MainMenu" type="Control" unique_id=1751049842]
 layout_mode = 3
@@ -22,6 +178,7 @@ offset_bottom = 9.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 8
+script = ExtResource("1_euy4r")
 
 [node name="Background" type="TextureRect" parent="." unique_id=467904930]
 layout_mode = 1
@@ -41,6 +198,16 @@ texture = ExtResource("1_xqga4")
 expand_mode = 3
 stretch_mode = 6
 
+[node name="FirefliesParticles" type="GPUParticles2D" parent="." unique_id=1956942873]
+position = Vector2(572.00006, 163)
+rotation = -1.5648899
+scale = Vector2(4.193203, 7.5173993)
+amount = 25
+texture = ExtResource("3_bre17")
+lifetime = 4.0
+randomness = 1.0
+process_material = SubResource("ParticleProcessMaterial_88kup")
+
 [node name="DimOverlay" type="ColorRect" parent="." unique_id=1190270779]
 layout_mode = 1
 anchors_preset = -1
@@ -52,8 +219,7 @@ offset_right = -0.00012207031
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(0, 0, 0, 0.1254902)
-metadata/_edit_use_anchors_ = true
+color = Color(0, 0, 0, 0.28)
 
 [node name="SafeArea" type="MarginContainer" parent="." unique_id=1473292520]
 layout_mode = 1
@@ -91,6 +257,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="TitleBlock" type="Control" parent="SafeArea/MainVBox/HeaderCenter/HeaderVBox" unique_id=628908082]
+modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(620, 210)
 layout_mode = 2
 mouse_filter = 2
@@ -130,6 +297,7 @@ custom_minimum_size = Vector2(470, 330)
 layout_mode = 2
 
 [node name="MenuBlock" type="Control" parent="SafeArea/MainVBox/MenuCenter" unique_id=471874060]
+modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(470, 330)
 layout_mode = 2
 
@@ -161,6 +329,7 @@ offset_bottom = 137.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.0693643, 0.8981296)
+mouse_filter = 2
 theme_override_constants/margin_left = 42
 theme_override_constants/margin_top = 34
 theme_override_constants/margin_right = 42
@@ -168,14 +337,17 @@ theme_override_constants/margin_bottom = 26
 
 [node name="ButtonsContainer" type="VBoxContainer" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin" unique_id=724404761]
 layout_mode = 2
+mouse_filter = 2
 theme_override_constants/separation = 14
 
 [node name="BtnNewGame" type="Button" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin/ButtonsContainer" unique_id=1670055027]
+z_index = 5
 custom_minimum_size = Vector2(0, 44)
 layout_mode = 2
+mouse_default_cursor_shape = 2
 flat = true
 
-[node name="BtnNewGameMargin" type="MarginContainer" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin/ButtonsContainer/BtnNewGame" unique_id=806571932]
+[node name="BtnNewGameMargin" type="MarginContainer" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin/ButtonsContainer/BtnNewGame" unique_id=806571932 groups=["menu_items"]]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -210,9 +382,10 @@ vertical_alignment = 1
 [node name="BtnLoadGame" type="Button" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin/ButtonsContainer" unique_id=1706570580]
 custom_minimum_size = Vector2(0, 44)
 layout_mode = 2
+mouse_default_cursor_shape = 2
 flat = true
 
-[node name="BtnLoadGameMargin" type="MarginContainer" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin/ButtonsContainer/BtnLoadGame" unique_id=702259631]
+[node name="BtnLoadGameMargin" type="MarginContainer" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin/ButtonsContainer/BtnLoadGame" unique_id=702259631 groups=["menu_items"]]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -246,9 +419,10 @@ vertical_alignment = 1
 [node name="BtnOptions" type="Button" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin/ButtonsContainer" unique_id=1336361464]
 custom_minimum_size = Vector2(0, 44)
 layout_mode = 2
+mouse_default_cursor_shape = 2
 flat = true
 
-[node name="BtnOptionsMargin" type="MarginContainer" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin/ButtonsContainer/BtnOptions" unique_id=1226575738]
+[node name="BtnOptionsMargin" type="MarginContainer" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin/ButtonsContainer/BtnOptions" unique_id=1226575738 groups=["menu_items"]]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -282,9 +456,10 @@ vertical_alignment = 1
 [node name="BtnCredits" type="Button" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin/ButtonsContainer" unique_id=1196081122]
 custom_minimum_size = Vector2(0, 44)
 layout_mode = 2
+mouse_default_cursor_shape = 2
 flat = true
 
-[node name="BtnCreditsMargin" type="MarginContainer" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin/ButtonsContainer/BtnCredits" unique_id=1484007864]
+[node name="BtnCreditsMargin" type="MarginContainer" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin/ButtonsContainer/BtnCredits" unique_id=1484007864 groups=["menu_items"]]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -318,9 +493,10 @@ vertical_alignment = 1
 [node name="BtnQuit" type="Button" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin/ButtonsContainer" unique_id=1569999127]
 custom_minimum_size = Vector2(0, 44)
 layout_mode = 2
+mouse_default_cursor_shape = 2
 flat = true
 
-[node name="BtnQuitMargin" type="MarginContainer" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin/ButtonsContainer/BtnQuit" unique_id=683700969]
+[node name="BtnQuitMargin" type="MarginContainer" parent="SafeArea/MainVBox/MenuCenter/MenuBlock/PanelMargin/ButtonsContainer/BtnQuit" unique_id=683700969 groups=["menu_items"]]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -350,3 +526,18 @@ theme_override_fonts/font = ExtResource("3_6bivr")
 theme_override_font_sizes/font_size = 24
 text = "QUIT"
 vertical_alignment = 1
+
+[node name="Bgm" type="AudioStreamPlayer" parent="." unique_id=347043122]
+stream = ExtResource("12_3w8rc")
+volume_db = -12.0
+
+[node name="HoverSfx" type="AudioStreamPlayer" parent="." unique_id=1923877481]
+stream = ExtResource("13_uxao6")
+volume_db = -10.0
+
+[node name="ClickSfx" type="AudioStreamPlayer" parent="." unique_id=1464965482]
+stream = ExtResource("14_vr0hv")
+volume_db = -8.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1741195896]
+libraries/ = SubResource("AnimationLibrary_bre17")
