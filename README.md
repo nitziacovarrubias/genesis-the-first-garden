@@ -12,6 +12,14 @@ genesis-the-first-garden/       # Root folder of the Godot project
 ├── .godot/                     # Godot-generated cache, import data, and editor metadata
 ├── assets/                     # Raw game assets used by the project
 │   ├── audio/                  # Music, ambience, and sound effects
+│   │   ├── music/              # Background music tracks (e.g. main menu theme)
+│   │   └── sfx/                # Sound effects
+│   │       └── ui/             # UI sounds such as hover and click
+│   ├── vfx/                    # Visual effects such as particles and glow effects
+│   │   └── particles/          # Particle textures used in GPUParticles2D
+│   │       └── feniks/         # External particle pack (fireflies, dust, etc.)
+│   │           ├── fireflies/
+│   │           └── dust/
 │   ├── backgrounds/            # Large background images and scenery art
 │   ├── fonts/                  # Fonts used in menus, titles, and UI
 │   ├── icons/                  # Small interface icons and cursor graphics
@@ -55,6 +63,9 @@ This folder stores the raw visual and audio files used by the game.
 
 Contains music, ambient sounds, button sounds, and gameplay sound effects.
 
+- `music/`: Contains background music tracks such as the main menu theme.
+- `sfx/ui/`: Contains user interface sound effects like hover and click interactions.
+
 #### `assets/backgrounds/`
 
 Stores large background images, scenery, and parallax art used in menus or levels.
@@ -78,6 +89,18 @@ Stores tile atlases and environment tiles used to build levels.
 #### `assets/ui/`
 
 Contains interface art such as frames, panels, buttons, parchment banners, overlays, and other menu elements.
+
+#### `assets/vfx/`
+
+Stores visual effects resources such as particle textures, glow sprites, and ambient effects used in menus and gameplay.
+
+#### `assets/vfx/particles/`
+
+Contains particle textures used by GPUParticles2D nodes, such as fireflies, dust, sparks, and other ambient effects.
+
+#### `assets/vfx/particles/feniks/`
+
+Stores particle assets imported from external packs (e.g., fireflies and dust used in the main menu background).
 
 ### `scenes/`
 
@@ -166,5 +189,3 @@ Contains external Godot plugins or additional editor tools used by the project.
 ### `project.godot`
 
 This is the main Godot project configuration file. It defines the project settings and is necessary for the engine to open the game correctly.
-
-
