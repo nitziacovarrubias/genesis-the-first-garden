@@ -1,0 +1,325 @@
+[gd_scene format=3 uid="uid://17i0nw55hlhu"]
+
+[ext_resource type="AudioStream" uid="uid://btsrgp0yjc7rm" path="res://assets/audio/ambience/intro_drone.ogg" id="1_1e4sa"]
+[ext_resource type="Script" uid="uid://dl0kdscr2ss8l" path="res://scenes/core/intro_day_1.gd" id="1_f8nbc"]
+[ext_resource type="AudioStream" uid="uid://c4c66glfswg0k" path="res://assets/audio/sfx/intro/text_whoosh.ogg" id="2_f8nbc"]
+[ext_resource type="AudioStream" uid="uid://k35yomg4cbd" path="res://assets/audio/sfx/intro/divine_rise.ogg" id="3_lkkmm"]
+[ext_resource type="AudioStream" uid="uid://v6u50q5ybrtf" path="res://assets/audio/sfx/intro/light_flash.ogg" id="4_g1prm"]
+[ext_resource type="AudioStream" uid="uid://b4xd3dd4x5rtj" path="res://assets/audio/sfx/intro/ring_tail.ogg" id="5_e36q8"]
+[ext_resource type="AudioStream" uid="uid://dvro0nthrl7lv" path="res://assets/audio/sfx/intro/dark_swell.ogg" id="6_biitu"]
+[ext_resource type="AudioStream" uid="uid://d3scibod1n1g8" path="res://assets/audio/sfx/intro/mission_pad.ogg" id="7_8nex2"]
+
+[sub_resource type="Animation" id="Animation_cpqjx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CenterContainer/VBoxContainer/Line1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CenterContainer/VBoxContainer/Line2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CenterContainer/VBoxContainer/Line3:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CenterContainer/VBoxContainer/Line4:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CenterContainer/VBoxContainer/Line5:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CenterContainer/VBoxContainer/Line6:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Flash:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_pdsaw"]
+resource_name = "play_intro"
+length = 24.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CenterContainer/VBoxContainer/Line1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.2, 2, 4, 4.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CenterContainer/VBoxContainer/Line2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5.2000003, 6.0000005, 8.5, 9.200001),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CenterContainer/VBoxContainer/Line3:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 10.6, 11.3, 13.200001, 13.900001),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CenterContainer/VBoxContainer/Line4:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 14.300001, 15.1, 18.2, 18.900002),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CenterContainer/VBoxContainer/Line5:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 19.300001, 20.000002, 21.800001, 22.300001),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CenterContainer/VBoxContainer/Line6:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 22.500002, 23.1, 24),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Flash:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(9.200001, 9.333334, 9.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath(".")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.33333334, 2.2333333, 6.133333, 7.5666666, 9.966666, 11.533334, 20.133333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"play_intro_drone"
+}, {
+"args": [],
+"method": &"play_text_whoosh"
+}, {
+"args": [],
+"method": &"play_divine_rise"
+}, {
+"args": [],
+"method": &"play_light_flash"
+}, {
+"args": [],
+"method": &"play_ring_tail"
+}, {
+"args": [],
+"method": &"play_dark_swell"
+}, {
+"args": [],
+"method": &"play_mission_pad"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b2e3h"]
+_data = {
+&"RESET": SubResource("Animation_cpqjx"),
+&"play_intro": SubResource("Animation_pdsaw")
+}
+
+[node name="IntroDay1" type="Control" unique_id=2106073653]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f8nbc")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1882954459]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Flash" type="ColorRect" parent="." unique_id=1007669673]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=867449171]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1743419920]
+layout_mode = 2
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="Line1" type="Label" parent="CenterContainer/VBoxContainer" unique_id=204310575]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+text = "In the beginning..."
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Line2" type="Label" parent="CenterContainer/VBoxContainer" unique_id=84310407]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+text = "And God said, “Let there be light.”"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Line3" type="Label" parent="CenterContainer/VBoxContainer" unique_id=943111774]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+text = "But something went wrong..."
+horizontal_alignment = 1
+
+[node name="Line4" type="Label" parent="CenterContainer/VBoxContainer" unique_id=668219640]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+text = "The light did not fully separate from the darkness."
+horizontal_alignment = 1
+
+[node name="Line5" type="Label" parent="CenterContainer/VBoxContainer" unique_id=2142771520]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+text = "Recover the lost seals of light."
+horizontal_alignment = 1
+
+[node name="Line6" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1701481373]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+text = "Restore the first day of creation."
+horizontal_alignment = 1
+
+[node name="IntroDrone" type="AudioStreamPlayer" parent="." unique_id=1909806899]
+stream = ExtResource("1_1e4sa")
+
+[node name="TextWhoosh" type="AudioStreamPlayer" parent="." unique_id=452419915]
+stream = ExtResource("2_f8nbc")
+
+[node name="DivineRise" type="AudioStreamPlayer" parent="." unique_id=57087965]
+stream = ExtResource("3_lkkmm")
+
+[node name="LightFlashSfx" type="AudioStreamPlayer" parent="." unique_id=469520413]
+stream = ExtResource("4_g1prm")
+
+[node name="RingTail" type="AudioStreamPlayer" parent="." unique_id=1620307845]
+stream = ExtResource("5_e36q8")
+
+[node name="DarkSwell" type="AudioStreamPlayer" parent="." unique_id=971552019]
+stream = ExtResource("6_biitu")
+
+[node name="MissionPad" type="AudioStreamPlayer" parent="." unique_id=1416751320]
+stream = ExtResource("7_8nex2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1578452183]
+libraries/ = SubResource("AnimationLibrary_b2e3h")
