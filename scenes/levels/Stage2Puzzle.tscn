@@ -1,0 +1,282 @@
+[gd_scene format=3 uid="uid://qoqrmr80jcv8"]
+
+[ext_resource type="Texture2D" uid="uid://degtn1bsegchq" path="res://assets/sprites/background_/background_noah.png" id="1_5fexg"]
+[ext_resource type="PackedScene" uid="uid://bmv2taqqn5na6" path="res://scenes/PuzzlePiece.tscn" id="1_kqtbe"]
+[ext_resource type="Texture2D" uid="uid://dsle8l3ax35kk" path="res://assets/sprites/pieces/piece1.png" id="2_7odx2"]
+[ext_resource type="Script" uid="uid://bytrqhb4s2o6v" path="res://scripts/puzzle_piece.gd" id="2_a2koy"]
+[ext_resource type="Texture2D" uid="uid://npslaly1rjmy" path="res://assets/sprites/pieces/piece2.png" id="4_utnxu"]
+[ext_resource type="Texture2D" uid="uid://coi5mafjim6qt" path="res://assets/sprites/pieces/piece3.png" id="5_foq4y"]
+[ext_resource type="Texture2D" uid="uid://pln17ulccbda" path="res://assets/sprites/pieces/piece4.png" id="6_gi6rh"]
+[ext_resource type="Texture2D" uid="uid://dyrsk43dmxevu" path="res://assets/sprites/pieces/piece5.png" id="7_f7twj"]
+[ext_resource type="Texture2D" uid="uid://3ci5bbgs3mfx" path="res://assets/sprites/pieces/piece6.png" id="8_5wwp4"]
+[ext_resource type="Texture2D" uid="uid://dqfj7le23juaw" path="res://assets/sprites/pieces/piece7.png" id="9_7sd1p"]
+[ext_resource type="Texture2D" uid="uid://do6ddept1n5lu" path="res://assets/sprites/pieces/piece8.png" id="10_5fexg"]
+[ext_resource type="Texture2D" uid="uid://bxpl0mgqa5mbp" path="res://assets/sprites/pieces/piece9.png" id="11_534v0"]
+[ext_resource type="Texture2D" uid="uid://dblp5vto16p88" path="res://assets/sprites/pieces/piece10.png" id="12_7ueh4"]
+[ext_resource type="Texture2D" uid="uid://btjjos0o81scd" path="res://assets/sprites/pieces/piece11.png" id="13_am05d"]
+[ext_resource type="Texture2D" uid="uid://ckg86wm5ugfl2" path="res://assets/sprites/pieces/piece12.png" id="14_87cli"]
+[ext_resource type="Texture2D" uid="uid://c6i86bi84txgt" path="res://assets/sprites/pieces/piece13.png" id="15_1m8jq"]
+[ext_resource type="Texture2D" uid="uid://xtuwebh5axk6" path="res://assets/sprites/pieces/ark2puzzleshape1.png" id="16_7sd1p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5wwp4"]
+size = Vector2(285, 210.00005)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qaa2t"]
+size = Vector2(555.00006, 240.00012)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_28whc"]
+size = Vector2(555.00006, 240.00012)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pbvb6"]
+size = Vector2(2225.001, 975.0027)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7sd1p"]
+size = Vector2(390, 180)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5fexg"]
+size = Vector2(625.00006, 145.00003)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_534v0"]
+size = Vector2(589.9995, 140)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ueh4"]
+size = Vector2(584.9999, 180.00018)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_am05d"]
+size = Vector2(269.99982, 589.9999)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_87cli"]
+size = Vector2(620, 254.99988)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1m8jq"]
+size = Vector2(284.99982, 280)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_utnxu"]
+size = Vector2(705.0001, 210.00003)
+
+[node name="Stage2Puzzle" type="Node2D" unique_id=1446675708]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=338873498]
+z_index = -11
+position = Vector2(600, 360)
+texture = ExtResource("1_5fexg")
+
+[node name="PuzzleBoard" type="Sprite2D" parent="." unique_id=1398369965]
+
+[node name="Pieces" type="Node2D" parent="PuzzleBoard" unique_id=1366528456]
+
+[node name="Piece_01" parent="PuzzleBoard/Pieces" unique_id=1890100302 instance=ExtResource("1_kqtbe")]
+position = Vector2(30, 40)
+scale = Vector2(0.2, 0.2)
+script = ExtResource("2_a2koy")
+target_slot_path = NodePath("../../Slots/Slot_01")
+
+[node name="Sprite2D" parent="PuzzleBoard/Pieces/Piece_01" index="0" unique_id=1006657856]
+texture = ExtResource("2_7odx2")
+
+[node name="CollisionShape2D" parent="PuzzleBoard/Pieces/Piece_01" index="1" unique_id=501275476]
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_5wwp4")
+
+[node name="Piece_02" parent="PuzzleBoard/Pieces" unique_id=1110423205 instance=ExtResource("1_kqtbe")]
+position = Vector2(65, 130)
+scale = Vector2(0.2, 0.2)
+script = ExtResource("2_a2koy")
+target_slot_path = NodePath(".")
+
+[node name="Sprite2D" parent="PuzzleBoard/Pieces/Piece_02" index="0" unique_id=1006657856]
+texture = ExtResource("4_utnxu")
+
+[node name="CollisionShape2D" parent="PuzzleBoard/Pieces/Piece_02" index="1" unique_id=501275476]
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_5wwp4")
+
+[node name="Piece_03" parent="PuzzleBoard/Pieces" unique_id=973851502 instance=ExtResource("1_kqtbe")]
+position = Vector2(65, 300)
+scale = Vector2(0.2, 0.2)
+script = ExtResource("2_a2koy")
+
+[node name="Sprite2D" parent="PuzzleBoard/Pieces/Piece_03" index="0" unique_id=1006657856]
+texture = ExtResource("5_foq4y")
+
+[node name="CollisionShape2D" parent="PuzzleBoard/Pieces/Piece_03" index="1" unique_id=501275476]
+scale = Vector2(0.99999964, 0.99999964)
+shape = SubResource("RectangleShape2D_qaa2t")
+
+[node name="Piece_04" parent="PuzzleBoard/Pieces" unique_id=29204274 instance=ExtResource("1_kqtbe")]
+position = Vector2(65, 400)
+scale = Vector2(0.2, 0.2)
+script = ExtResource("2_a2koy")
+
+[node name="Sprite2D" parent="PuzzleBoard/Pieces/Piece_04" index="0" unique_id=1006657856]
+texture = ExtResource("6_gi6rh")
+
+[node name="CollisionShape2D" parent="PuzzleBoard/Pieces/Piece_04" index="1" unique_id=501275476]
+scale = Vector2(0.99999964, 0.99999964)
+shape = SubResource("RectangleShape2D_28whc")
+
+[node name="Piece_05" parent="PuzzleBoard/Pieces" unique_id=1534515676 instance=ExtResource("1_kqtbe")]
+position = Vector2(80, 500)
+scale = Vector2(0.2, 0.2)
+script = ExtResource("2_a2koy")
+
+[node name="Sprite2D" parent="PuzzleBoard/Pieces/Piece_05" index="0" unique_id=1006657856]
+texture = ExtResource("7_f7twj")
+
+[node name="CollisionShape2D" parent="PuzzleBoard/Pieces/Piece_05" index="1" unique_id=501275476]
+scale = Vector2(0.19999994, 0.19999994)
+shape = SubResource("RectangleShape2D_pbvb6")
+
+[node name="Piece_06" parent="PuzzleBoard/Pieces" unique_id=1498158617 instance=ExtResource("1_kqtbe")]
+position = Vector2(75, 570)
+scale = Vector2(0.2, 0.2)
+script = ExtResource("2_a2koy")
+
+[node name="Sprite2D" parent="PuzzleBoard/Pieces/Piece_06" index="0" unique_id=1006657856]
+texture = ExtResource("8_5wwp4")
+
+[node name="CollisionShape2D" parent="PuzzleBoard/Pieces/Piece_06" index="1" unique_id=501275476]
+position = Vector2(24.99997, 30)
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_7sd1p")
+
+[node name="Piece_07" parent="PuzzleBoard/Pieces" unique_id=191344867 instance=ExtResource("1_kqtbe")]
+position = Vector2(1100, 40)
+scale = Vector2(0.2, 0.2)
+script = ExtResource("2_a2koy")
+
+[node name="Sprite2D" parent="PuzzleBoard/Pieces/Piece_07" index="0" unique_id=1006657856]
+texture = ExtResource("9_7sd1p")
+
+[node name="CollisionShape2D" parent="PuzzleBoard/Pieces/Piece_07" index="1" unique_id=501275476]
+position = Vector2(32.5, 2.5000153)
+scale = Vector2(0.99999964, 0.99999964)
+shape = SubResource("RectangleShape2D_5fexg")
+
+[node name="Piece_08" parent="PuzzleBoard/Pieces" unique_id=1810151197 instance=ExtResource("1_kqtbe")]
+position = Vector2(1100, 120)
+scale = Vector2(0.2, 0.2)
+script = ExtResource("2_a2koy")
+
+[node name="Sprite2D" parent="PuzzleBoard/Pieces/Piece_08" index="0" unique_id=1006657856]
+texture = ExtResource("10_5fexg")
+
+[node name="CollisionShape2D" parent="PuzzleBoard/Pieces/Piece_08" index="1" unique_id=501275476]
+position = Vector2(-5, 39.99994)
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_534v0")
+
+[node name="Piece_09" parent="PuzzleBoard/Pieces" unique_id=2056310745 instance=ExtResource("1_kqtbe")]
+position = Vector2(1100, 200)
+scale = Vector2(0.2, 0.2)
+script = ExtResource("2_a2koy")
+
+[node name="Sprite2D" parent="PuzzleBoard/Pieces/Piece_09" index="0" unique_id=1006657856]
+texture = ExtResource("11_534v0")
+
+[node name="CollisionShape2D" parent="PuzzleBoard/Pieces/Piece_09" index="1" unique_id=501275476]
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_7ueh4")
+
+[node name="Piece_10" parent="PuzzleBoard/Pieces" unique_id=418523312 instance=ExtResource("1_kqtbe")]
+position = Vector2(1100, 300)
+scale = Vector2(0.2, 0.2)
+script = ExtResource("2_a2koy")
+
+[node name="Sprite2D" parent="PuzzleBoard/Pieces/Piece_10" index="0" unique_id=1006657856]
+texture = ExtResource("12_7ueh4")
+
+[node name="CollisionShape2D" parent="PuzzleBoard/Pieces/Piece_10" index="1" unique_id=501275476]
+position = Vector2(5, 19.999878)
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_am05d")
+
+[node name="Piece_11" parent="PuzzleBoard/Pieces" unique_id=1595782038 instance=ExtResource("1_kqtbe")]
+position = Vector2(1100, 420)
+scale = Vector2(0.2, 0.2)
+script = ExtResource("2_a2koy")
+
+[node name="Sprite2D" parent="PuzzleBoard/Pieces/Piece_11" index="0" unique_id=1006657856]
+texture = ExtResource("13_am05d")
+
+[node name="CollisionShape2D" parent="PuzzleBoard/Pieces/Piece_11" index="1" unique_id=501275476]
+position = Vector2(20, 2.5)
+scale = Vector2(0.99999964, 0.99999964)
+shape = SubResource("RectangleShape2D_87cli")
+
+[node name="Piece_12" parent="PuzzleBoard/Pieces" unique_id=457423020 instance=ExtResource("1_kqtbe")]
+position = Vector2(1100, 520)
+scale = Vector2(0.2, 0.2)
+script = ExtResource("2_a2koy")
+
+[node name="Sprite2D" parent="PuzzleBoard/Pieces/Piece_12" index="0" unique_id=1006657856]
+texture = ExtResource("14_87cli")
+
+[node name="CollisionShape2D" parent="PuzzleBoard/Pieces/Piece_12" index="1" unique_id=501275476]
+position = Vector2(7.5, -15)
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_1m8jq")
+
+[node name="Piece_13" parent="PuzzleBoard/Pieces" unique_id=450993612 instance=ExtResource("1_kqtbe")]
+position = Vector2(85, 210)
+scale = Vector2(0.2, 0.2)
+script = ExtResource("2_a2koy")
+
+[node name="Sprite2D" parent="PuzzleBoard/Pieces/Piece_13" index="0" unique_id=1006657856]
+texture = ExtResource("15_1m8jq")
+
+[node name="CollisionShape2D" parent="PuzzleBoard/Pieces/Piece_13" index="1" unique_id=501275476]
+position = Vector2(-2.5000186, -25.00001)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_utnxu")
+
+[node name="Slots" type="Sprite2D" parent="PuzzleBoard" unique_id=902149683]
+
+[node name="Slot_01" type="Marker2D" parent="PuzzleBoard/Slots" unique_id=431165971]
+position = Vector2(332, 200)
+
+[node name="Slot_02" type="Marker2D" parent="PuzzleBoard/Slots" unique_id=1375293757]
+position = Vector2(340, 290)
+
+[node name="Slot_03" type="Marker2D" parent="PuzzleBoard/Slots" unique_id=1288400295]
+
+[node name="Slot_04" type="Marker2D" parent="PuzzleBoard/Slots" unique_id=1020477570]
+
+[node name="Slot_05" type="Marker2D" parent="PuzzleBoard/Slots" unique_id=1199545269]
+
+[node name="Slot_06" type="Marker2D" parent="PuzzleBoard/Slots" unique_id=1821105009]
+
+[node name="Slot_07" type="Marker2D" parent="PuzzleBoard/Slots" unique_id=678111365]
+
+[node name="Slot_08" type="Marker2D" parent="PuzzleBoard/Slots" unique_id=1803963438]
+
+[node name="Slot_09" type="Marker2D" parent="PuzzleBoard/Slots" unique_id=2112675601]
+
+[node name="Slot_10" type="Marker2D" parent="PuzzleBoard/Slots" unique_id=1921084618]
+
+[node name="Slot_11" type="Marker2D" parent="PuzzleBoard/Slots" unique_id=235705461]
+
+[node name="Slot_12" type="Marker2D" parent="PuzzleBoard/Slots" unique_id=277214913]
+
+[node name="Slot_13" type="Marker2D" parent="PuzzleBoard/Slots" unique_id=163285064]
+position = Vector2(118, 9)
+
+[node name="Silhouette" type="Sprite2D" parent="PuzzleBoard" unique_id=1356641859]
+z_index = -10
+position = Vector2(571, 349.99997)
+scale = Vector2(0.38, 0.38)
+texture = ExtResource("16_7sd1p")
+
+[editable path="PuzzleBoard/Pieces/Piece_01"]
+[editable path="PuzzleBoard/Pieces/Piece_02"]
+[editable path="PuzzleBoard/Pieces/Piece_03"]
+[editable path="PuzzleBoard/Pieces/Piece_04"]
+[editable path="PuzzleBoard/Pieces/Piece_05"]
+[editable path="PuzzleBoard/Pieces/Piece_06"]
+[editable path="PuzzleBoard/Pieces/Piece_07"]
+[editable path="PuzzleBoard/Pieces/Piece_08"]
+[editable path="PuzzleBoard/Pieces/Piece_09"]
+[editable path="PuzzleBoard/Pieces/Piece_10"]
+[editable path="PuzzleBoard/Pieces/Piece_11"]
+[editable path="PuzzleBoard/Pieces/Piece_12"]
+[editable path="PuzzleBoard/Pieces/Piece_13"]
