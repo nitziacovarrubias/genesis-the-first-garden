@@ -82,7 +82,7 @@ shape = SubResource("RectangleShape2D_5wwp4")
 position = Vector2(65, 130)
 scale = Vector2(0.2, 0.2)
 script = ExtResource("2_a2koy")
-target_slot_path = NodePath(".")
+target_slot_path = NodePath("../../Slots/Slot_02")
 
 [node name="Sprite2D" parent="PuzzleBoard/Pieces/Piece_02" index="0" unique_id=1006657856]
 texture = ExtResource("4_utnxu")
@@ -95,6 +95,7 @@ shape = SubResource("RectangleShape2D_5wwp4")
 position = Vector2(65, 300)
 scale = Vector2(0.2, 0.2)
 script = ExtResource("2_a2koy")
+target_slot_path = NodePath("../../Slots/Slot_03")
 
 [node name="Sprite2D" parent="PuzzleBoard/Pieces/Piece_03" index="0" unique_id=1006657856]
 texture = ExtResource("5_foq4y")
@@ -107,6 +108,7 @@ shape = SubResource("RectangleShape2D_qaa2t")
 position = Vector2(65, 400)
 scale = Vector2(0.2, 0.2)
 script = ExtResource("2_a2koy")
+target_slot_path = NodePath("../../Slots/Slot_04")
 
 [node name="Sprite2D" parent="PuzzleBoard/Pieces/Piece_04" index="0" unique_id=1006657856]
 texture = ExtResource("6_gi6rh")
@@ -119,6 +121,7 @@ shape = SubResource("RectangleShape2D_28whc")
 position = Vector2(80, 500)
 scale = Vector2(0.2, 0.2)
 script = ExtResource("2_a2koy")
+target_slot_path = NodePath("../../Slots/Slot_05")
 
 [node name="Sprite2D" parent="PuzzleBoard/Pieces/Piece_05" index="0" unique_id=1006657856]
 texture = ExtResource("7_f7twj")
@@ -131,6 +134,7 @@ shape = SubResource("RectangleShape2D_pbvb6")
 position = Vector2(75, 570)
 scale = Vector2(0.2, 0.2)
 script = ExtResource("2_a2koy")
+target_slot_path = NodePath("../../Slots/Slot_06")
 
 [node name="Sprite2D" parent="PuzzleBoard/Pieces/Piece_06" index="0" unique_id=1006657856]
 texture = ExtResource("8_5wwp4")
@@ -144,6 +148,7 @@ shape = SubResource("RectangleShape2D_7sd1p")
 position = Vector2(1100, 40)
 scale = Vector2(0.2, 0.2)
 script = ExtResource("2_a2koy")
+target_slot_path = NodePath("../../Slots/Slot_07")
 
 [node name="Sprite2D" parent="PuzzleBoard/Pieces/Piece_07" index="0" unique_id=1006657856]
 texture = ExtResource("9_7sd1p")
@@ -157,6 +162,7 @@ shape = SubResource("RectangleShape2D_5fexg")
 position = Vector2(1100, 120)
 scale = Vector2(0.2, 0.2)
 script = ExtResource("2_a2koy")
+target_slot_path = NodePath("../../Slots/Slot_08")
 
 [node name="Sprite2D" parent="PuzzleBoard/Pieces/Piece_08" index="0" unique_id=1006657856]
 texture = ExtResource("10_5fexg")
@@ -170,6 +176,7 @@ shape = SubResource("RectangleShape2D_534v0")
 position = Vector2(1100, 200)
 scale = Vector2(0.2, 0.2)
 script = ExtResource("2_a2koy")
+target_slot_path = NodePath("../../Slots/Slot_09")
 
 [node name="Sprite2D" parent="PuzzleBoard/Pieces/Piece_09" index="0" unique_id=1006657856]
 texture = ExtResource("11_534v0")
@@ -182,6 +189,7 @@ shape = SubResource("RectangleShape2D_7ueh4")
 position = Vector2(1100, 300)
 scale = Vector2(0.2, 0.2)
 script = ExtResource("2_a2koy")
+target_slot_path = NodePath("../../Slots/Slot_10")
 
 [node name="Sprite2D" parent="PuzzleBoard/Pieces/Piece_10" index="0" unique_id=1006657856]
 texture = ExtResource("12_7ueh4")
@@ -195,6 +203,7 @@ shape = SubResource("RectangleShape2D_am05d")
 position = Vector2(1100, 420)
 scale = Vector2(0.2, 0.2)
 script = ExtResource("2_a2koy")
+target_slot_path = NodePath("../../Slots/Slot_11")
 
 [node name="Sprite2D" parent="PuzzleBoard/Pieces/Piece_11" index="0" unique_id=1006657856]
 texture = ExtResource("13_am05d")
@@ -208,6 +217,7 @@ shape = SubResource("RectangleShape2D_87cli")
 position = Vector2(1100, 520)
 scale = Vector2(0.2, 0.2)
 script = ExtResource("2_a2koy")
+target_slot_path = NodePath("../../Slots/Slot_12")
 
 [node name="Sprite2D" parent="PuzzleBoard/Pieces/Piece_12" index="0" unique_id=1006657856]
 texture = ExtResource("14_87cli")
@@ -221,6 +231,7 @@ shape = SubResource("RectangleShape2D_1m8jq")
 position = Vector2(85, 210)
 scale = Vector2(0.2, 0.2)
 script = ExtResource("2_a2koy")
+target_slot_path = NodePath("../../Slots/Slot_13")
 
 [node name="Sprite2D" parent="PuzzleBoard/Pieces/Piece_13" index="0" unique_id=1006657856]
 texture = ExtResource("15_1m8jq")
@@ -236,30 +247,40 @@ shape = SubResource("RectangleShape2D_utnxu")
 position = Vector2(332, 200)
 
 [node name="Slot_02" type="Marker2D" parent="PuzzleBoard/Slots" unique_id=1375293757]
-position = Vector2(340, 290)
+position = Vector2(330, 300)
 
 [node name="Slot_03" type="Marker2D" parent="PuzzleBoard/Slots" unique_id=1288400295]
+position = Vector2(430, 395)
 
 [node name="Slot_04" type="Marker2D" parent="PuzzleBoard/Slots" unique_id=1020477570]
+position = Vector2(370, 500)
 
 [node name="Slot_05" type="Marker2D" parent="PuzzleBoard/Slots" unique_id=1199545269]
+position = Vector2(494, 298)
 
 [node name="Slot_06" type="Marker2D" parent="PuzzleBoard/Slots" unique_id=1821105009]
+position = Vector2(738, 295)
 
 [node name="Slot_07" type="Marker2D" parent="PuzzleBoard/Slots" unique_id=678111365]
+position = Vector2(690, 370)
 
 [node name="Slot_08" type="Marker2D" parent="PuzzleBoard/Slots" unique_id=1803963438]
+position = Vector2(690, 425)
 
 [node name="Slot_09" type="Marker2D" parent="PuzzleBoard/Slots" unique_id=2112675601]
+position = Vector2(680, 482)
 
 [node name="Slot_10" type="Marker2D" parent="PuzzleBoard/Slots" unique_id=1921084618]
+position = Vector2(835, 410)
 
 [node name="Slot_11" type="Marker2D" parent="PuzzleBoard/Slots" unique_id=235705461]
+position = Vector2(510, 240)
 
 [node name="Slot_12" type="Marker2D" parent="PuzzleBoard/Slots" unique_id=277214913]
+position = Vector2(690, 250)
 
 [node name="Slot_13" type="Marker2D" parent="PuzzleBoard/Slots" unique_id=163285064]
-position = Vector2(118, 9)
+position = Vector2(535, 175)
 
 [node name="Silhouette" type="Sprite2D" parent="PuzzleBoard" unique_id=1356641859]
 z_index = -10
