@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://qoqrmr80jcv8"]
 
 [ext_resource type="Texture2D" uid="uid://degtn1bsegchq" path="res://assets/sprites/background_/background_noah.png" id="1_5fexg"]
+[ext_resource type="Script" uid="uid://crhygxqrxn8cp" path="res://scenes/levels/stage_2_puzzle.gd" id="1_303jh"]
 [ext_resource type="PackedScene" uid="uid://bmv2taqqn5na6" path="res://scenes/PuzzlePiece.tscn" id="1_kqtbe"]
 [ext_resource type="Texture2D" uid="uid://dsle8l3ax35kk" path="res://assets/sprites/pieces/piece1.png" id="2_7odx2"]
 [ext_resource type="Script" uid="uid://bytrqhb4s2o6v" path="res://scripts/puzzle_piece.gd" id="2_a2koy"]
@@ -17,6 +18,12 @@
 [ext_resource type="Texture2D" uid="uid://ckg86wm5ugfl2" path="res://assets/sprites/pieces/piece12.png" id="14_87cli"]
 [ext_resource type="Texture2D" uid="uid://c6i86bi84txgt" path="res://assets/sprites/pieces/piece13.png" id="15_1m8jq"]
 [ext_resource type="Texture2D" uid="uid://xtuwebh5axk6" path="res://assets/sprites/pieces/ark2puzzleshape1.png" id="16_7sd1p"]
+[ext_resource type="PackedScene" uid="uid://coxieeoht5w06" path="res://scripts/ui/mission/mission_popup.tscn" id="18_am05d"]
+[ext_resource type="PackedScene" uid="uid://wb464y81dgse" path="res://scripts/ui/mission/MissionCompletePopup.tscn" id="19_87cli"]
+[ext_resource type="PackedScene" uid="uid://c56g5y3q28ds2" path="res://scripts/ui/mission/MissionTrackerHUD.tscn" id="20_1m8jq"]
+[ext_resource type="Script" uid="uid://c1tddbfsemnmj" path="res://scripts/ui/mission/mission_popup_stage2.gd" id="20_28whc"]
+[ext_resource type="Script" uid="uid://dyi4yoehcvrft" path="res://scripts/ui/mission/mission_tracker_hud_stage2.gd" id="21_87cli"]
+[ext_resource type="Script" uid="uid://cpwsx0yqcea6b" path="res://scripts/ui/mission/mission_complete_popup_stage2.gd" id="22_28whc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5wwp4"]
 size = Vector2(285, 210.00005)
@@ -55,6 +62,7 @@ size = Vector2(284.99982, 280)
 size = Vector2(705.0001, 210.00003)
 
 [node name="Stage2Puzzle" type="Node2D" unique_id=1446675708]
+script = ExtResource("1_303jh")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=338873498]
 z_index = -11
@@ -101,7 +109,7 @@ target_slot_path = NodePath("../../Slots/Slot_03")
 texture = ExtResource("5_foq4y")
 
 [node name="CollisionShape2D" parent="PuzzleBoard/Pieces/Piece_03" index="1" unique_id=501275476]
-scale = Vector2(0.99999964, 0.99999964)
+scale = Vector2(0.9999995, 0.9999995)
 shape = SubResource("RectangleShape2D_qaa2t")
 
 [node name="Piece_04" parent="PuzzleBoard/Pieces" unique_id=29204274 instance=ExtResource("1_kqtbe")]
@@ -287,6 +295,15 @@ z_index = -10
 position = Vector2(571, 349.99997)
 scale = Vector2(0.38, 0.38)
 texture = ExtResource("16_7sd1p")
+
+[node name="MissionPopup2" parent="." unique_id=2026437814 instance=ExtResource("18_am05d")]
+script = ExtResource("20_28whc")
+
+[node name="MissionCompletePopup2" parent="." unique_id=136109451 instance=ExtResource("19_87cli")]
+script = ExtResource("22_28whc")
+
+[node name="MissionTrackerHUD2" parent="." unique_id=1230016146 instance=ExtResource("20_1m8jq")]
+script = ExtResource("21_87cli")
 
 [editable path="PuzzleBoard/Pieces/Piece_01"]
 [editable path="PuzzleBoard/Pieces/Piece_02"]
