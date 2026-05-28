@@ -24,7 +24,9 @@ func show_completion(biome_id: String) -> void:
 	if biome_id == "spring":
 		message_label.text = "All required resources have been collected.\n\nThe door at the end of the biome has been opened.\nYou may now continue."
 	elif biome_id == "summer":
-		message_label.text = "All seven pairs of animals have been gathered.\n\nThe door at the end of the biome has been opened.\nYou may now continue."
+		message_label.text = "All seven animal pairs have been gathered.\n\nThe door at the end of the Summer Biome has been opened.\nYou may now continue."
+	elif biome_id == "winter":
+		message_label.text = "Noah's family has been gathered.\n\nThe door at the end of the Winter Biome has been opened.\nYou may now continue."
 	else:
 		message_label.text = "The mission has been completed.\n\nThe path forward is now open."
 

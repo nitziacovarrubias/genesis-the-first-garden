@@ -132,6 +132,48 @@ var missions := {
 				"icon": preload("res://assets/sprites/animals/summer/atlas/chicken_male.tres")
 			}
 		}
+	},
+	"winter": {
+		"title": "Winter Biome",
+		"subtitle": "Gather Noah's Family",
+		"description": "The storm is getting closer. Find Noah's family and bring them together before moving forward.",
+		"items": {
+			"noahs_wife": {
+				"display_name": "Noah's Wife",
+				"required": 1,
+				"icon": preload("res://assets/sprites/people/winter/noahs_wife.png")
+			},
+			"shem": {
+				"display_name": "Shem",
+				"required": 1,
+				"icon": preload("res://assets/sprites/people/winter/shem.png")
+			},
+			"ham": {
+				"display_name": "Ham",
+				"required": 1,
+				"icon": preload("res://assets/sprites/people/winter/ham.png")
+			},
+			"japheth": {
+				"display_name": "Japheth",
+				"required": 1,
+				"icon": preload("res://assets/sprites/people/winter/japheth.png")
+			},
+			"shems_wife": {
+				"display_name": "Shem's Wife",
+				"required": 1,
+				"icon": preload("res://assets/sprites/people/winter/shems_wife.png")
+			},
+			"hams_wife": {
+				"display_name": "Ham's Wife",
+				"required": 1,
+				"icon": preload("res://assets/sprites/people/winter/hams_wife.png")
+			},
+			"japheths_wife": {
+				"display_name": "Japheth's Wife",
+				"required": 1,
+				"icon": preload("res://assets/sprites/people/winter/japheths_wife.png")
+			}
+		}
 	}
 }
 

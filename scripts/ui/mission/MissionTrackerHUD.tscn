@@ -13,12 +13,15 @@ offset_left = 1000.0
 offset_top = 550.0
 offset_right = 1000.0
 offset_bottom = 550.0
+size_flags_horizontal = 4
 mouse_filter = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="Root" unique_id=1730111902]
 layout_mode = 1
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -143.0
+offset_top = -49.0
+offset_right = 198.0
+offset_bottom = 173.0
 pivot_offset = Vector2(16, 16)
 
 [node name="PanelContainer" type="PanelContainer" parent="Root/MarginContainer" unique_id=265594659]

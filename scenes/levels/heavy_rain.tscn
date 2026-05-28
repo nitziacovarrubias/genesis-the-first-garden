@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cyiwtwocwtvbn"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_dwwvu"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(900, 20, 1)
+direction = Vector3(-0.25, 1, 0)
+initial_velocity_min = 900.0
+initial_velocity_max = 1300.0
+gravity = Vector3(-500, 1800, 0)
+scale_min = 0.5
+scale_max = 1.1
+
+[node name="HeavyRain" type="GPUParticles2D" unique_id=1038682798]
+lifetime = 1.2
+preprocess = 1.0
+speed_scale = 1.4
+process_material = SubResource("ParticleProcessMaterial_dwwvu")

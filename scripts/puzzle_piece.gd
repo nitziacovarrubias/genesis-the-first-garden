@@ -55,7 +55,15 @@ func check_placement():
 		z_index = 0
 		placed = true
 		input_pickable = false
+
 		emit_signal("placed_correctly")
+
+		var puzzle_scene = get_tree().current_scene
+		if puzzle_scene != null and puzzle_scene.has_method("register_ark_piece_placed"):
+			puzzle_scene.register_ark_piece_placed(name)
+		else:
+			print("No se encontró register_ark_piece_placed en la escena actual")
+
 	else:
 		scale = original_scale
 		z_index = 0

@@ -15,11 +15,19 @@ func set_total_pieces(value: int) -> void:
 	update_tracker()
 
 func add_piece() -> void:
+	if placed_pieces >= total_pieces:
+		return
+
 	placed_pieces += 1
 	update_tracker()
 
 func set_progress(value: int) -> void:
-	placed_pieces = value
+	placed_pieces = clamp(value, 0, total_pieces)
+	update_tracker()
+
+func set_ark_progress(current: int, total: int) -> void:
+	placed_pieces = clamp(current, 0, total)
+	total_pieces = total
 	update_tracker()
 
 func update_tracker() -> void:

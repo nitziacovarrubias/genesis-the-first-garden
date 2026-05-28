@@ -34,6 +34,8 @@ func show_mission(biome_id: String) -> void:
 		objective_label.text = "Required resources:"
 	elif biome_id == "summer":
 		objective_label.text = "Required animal pairs:"
+	elif biome_id == "winter":
+		objective_label.text = "Required people:"
 	else:
 		objective_label.text = "Required:"
 

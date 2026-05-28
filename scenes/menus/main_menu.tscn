@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cde8kjg7x4thv"]
 
 [ext_resource type="Script" uid="uid://rawa62wskxyf" path="res://scenes/menus/main_menu.gd" id="1_euy4r"]
-[ext_resource type="Texture2D" uid="uid://3fcj1gks1fcy" path="res://scenes/ui/backgrounds/main_menu_background.png" id="1_xqga4"]
+[ext_resource type="Texture2D" uid="uid://degtn1bsegchq" path="res://assets/sprites/background_/background_noah.png" id="2_3w8rc"]
 [ext_resource type="Texture2D" uid="uid://cqpo7ga3k87fo" path="res://scenes/ui/title/title_scroll.png" id="2_ovrgc"]
 [ext_resource type="Texture2D" uid="uid://cb3s4uwb7dd5o" path="res://scenes/ui/panels/main_menu_panel.png" id="3_2o76q"]
 [ext_resource type="FontFile" uid="uid://n1lt6u6fiall" path="res://assets/fonts/pixel_font.ttf" id="3_6bivr"]
@@ -223,7 +223,7 @@ grow_vertical = 2
 scale = Vector2(0.3028868, 0.3221313)
 pivot_offset = Vector2(-10.875, -14.362915)
 mouse_filter = 2
-texture = ExtResource("1_xqga4")
+texture = ExtResource("2_3w8rc")
 expand_mode = 3
 stretch_mode = 6
 
